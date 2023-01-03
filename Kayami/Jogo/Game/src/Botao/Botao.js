@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { Button, View } from 'react-native';
+import { Button, View, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import Mostra from '../MostraResult/MostraResultado';
 
 export default function Botao() {
@@ -38,13 +38,35 @@ export default function Botao() {
 
     return (
         <View>
-            <View>
-                <Button title='Sorteio' onPress={() => ChamaTodasFunction()} />
+            <View style={Styles.Botao}>
+                <TouchableOpacity title='Sorteio' onPress={() => ChamaTodasFunction()} style={Styles.Button} >
+                    <Text style={Styles.Text}>Sorteio</Text>
+                </TouchableOpacity>
             </View>
             <Mostra Result1={Play1} Result2={Play2} Mensagem={mesage} />
         </View>
     );
 }
+
+const Styles = StyleSheet.create({
+    Botao: {
+        // color: 'black',
+        // backgroundColor: 'yellow',
+        // height: 50,
+    },
+    Button: {
+        width: 75,
+        height: 75,
+        borderRadius: 0,
+        backgroundColor: 'yellow',
+        marginLeft: 45,
+        textAlign: 'center',
+    },
+    Text: {
+        paddingTop: 25
+    }
+
+})
 
 
 

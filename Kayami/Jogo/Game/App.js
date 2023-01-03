@@ -6,11 +6,15 @@ import Title from './src/Titulo/Title.js';
 import Botao from './src/Botao/Botao.js';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Title />
-      <Botao />
+    <View>
+      <View style={styles.container}>
+        <Title />
+      </View>
+      <View style={styles.Botao}>
+        <Botao />
+      </View>
 
-    </View>
+    </View >
   );
 }
 
@@ -18,9 +22,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  Botao: {
+    backgroundColor: 'red',
+    margin: 35,
+    width: 150,
+    marginLeft: 60,
+    height: 300
   },
 });
 
