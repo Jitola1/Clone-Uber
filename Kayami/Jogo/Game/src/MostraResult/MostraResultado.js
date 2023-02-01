@@ -5,7 +5,7 @@ import { Text, View, StyleSheet } from 'react-native';
 export default function Mostra(props) {
     console.log(props);
     return (
-        <View style={{ backgroundColor: "red", width: 150, height: 300 }}>
+        <View style={{ backgroundColor: "red", width: 150, height: 400 }}>
             <View style={campos.P1}>
                 <Text style={campos.P1}>P1: {props.Result1}</Text>
             </View>
@@ -23,19 +23,22 @@ const campos = StyleSheet.create({
     P1: {
         flex: 1,
         width: 150,
-        maxHeight: 20,
+        paddingTop: 20,
+        paddingBottom: 20,
         backgroundColor: 'blue',
-        alignContent: 'center',
+        textShadowColor: 20,
         textAlign: 'center'
     },
     Message: {
-        paddingTop: 20,
-        alignContent: 'center',
-        textAlign: 'center'
+        flex: 2,
+        paddingTop: 40,
+        textAlign: 'center',
+        backgroundColor: 'yellow'
     },
     P2: {
-        paddingTop: 20,
-        alignContent: 'center',
-        textAlign: 'center'
+        flex: 3,
+        paddingTop: 10,
+        textAlign: 'center',
+        backgroundColor: 'blue'
     }
 })
